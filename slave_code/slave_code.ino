@@ -1,3 +1,12 @@
+///////////////////////////////////
+/*This is the code needed for the SHARD-1 payload computer
+
+Version: 1.0
+Created by: J Crabb
+Email: jc00300@surrey.ac.uk
+*/
+
+
 /////////////////////////////////
 //I2C start
 #include <Wire.h>
