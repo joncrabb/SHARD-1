@@ -4,6 +4,7 @@
 
 const byte SlaveDeviceId = 1;
 byte LastMasterCommand = 0;
+int count;
 ///////////////////////////////
 
 ///////////////////////////////
@@ -12,22 +13,21 @@ volatile unsigned int pulses=0;
 ///////////////////////////////
 
 void setup() {
-  attachInterrupt(0, countpulses, LOW); // interrupt 0 = pin 2      
+  attachInterrupt(0, countpulses, HIGH); // interrupt 0 = pin 2      
   Serial.begin(9600);
   Wire.begin(SlaveDeviceId); //Start I2C Bus as a Slave (Device Number 1)
   Wire.onReceive(receiveCommand); // register event
   Wire.onRequest(slavesRespond);  // register callback event
-  int count = 0;
+  Serial.println ("Reset");
 }
 
 void loop() {
-  //Serial.println(pulses); Code for testing the counting
+  Serial.println(count); //Code for testing the counting
   delay(500);
 }
 
-void countpulses() {
-  int count;
-  ++count;
+void countpulses() {  
+  count++;
 }
 
 void receiveCommand(int howMany){
