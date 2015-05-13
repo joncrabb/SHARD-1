@@ -45,7 +45,7 @@ void receiveCommand(int howMany){
 
 void slavesRespond(){
   int returnValue = 0;
-  int count;
+  //int count;
  
   switch(LastMasterCommand){
     case 0:   // No new command was received
@@ -61,4 +61,5 @@ void slavesRespond(){
   buffer[1] = returnValue & 0xff;
   Wire.write(buffer, 2);          // return slave's response to last command
   LastMasterCommand = 0;          // null last Master's command and wait for next
+  count = 0;
 }

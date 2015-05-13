@@ -1,18 +1,26 @@
  
 #include <Wire.h>
+unsigned long time;
+double Time;
 void setup()
 {
   Wire.begin();        // join i2c bus (address optional for master)
   Serial.begin(9600);  // start serial for output
+  Serial.println("Reset");
 }
  
 void loop()
 {
   int x = GetCount(1); // 1 - slave's address
+  time = millis();
+  Time = time/1000.0;
+  Serial.print("Time:");
+  Serial.print(Time);
+  Serial.print(" ");
   Serial.print("Count Value:");
   Serial.println(x);
   
-  delay (100);
+  delay (10000);
 }
  
 int GetCount(byte SlaveDeviceId){
