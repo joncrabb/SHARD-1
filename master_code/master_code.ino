@@ -20,7 +20,7 @@ void loop()
   Serial.print("Count Value:");
   Serial.println(x);
   
-  delay (30000);
+  delay (1000);
 }
  
 int GetCount(byte SlaveDeviceId){

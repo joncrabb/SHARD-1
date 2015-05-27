@@ -11,6 +11,8 @@ v1.0: First version that worked completely
 v1.1: Added the variable 'dataout' which is updated every 30 seconds to 
 send over I2C to ensure it keeps to a time resolution of 30s. Also added some debugging code.
 
+v1.2: It now disables the interrupts when reading the I2C is being used. This is so that the data can be taken off the device.
+However, this now adds some unwanted deadtime in the detector which could be a problem at high count rates.
 */
 
 
@@ -20,14 +22,14 @@ send over I2C to ensure it keeps to a time resolution of 30s. Also added some de
 
 const byte SlaveDeviceId = 1;
 byte LastMasterCommand = 0;
-int count;
-int led = 13; //Used for debugging
+
+//int led = 13; //Used for debugging
 int dataout;
 ///////////////////////////////
 
 ///////////////////////////////
 //Interrupt start
-volatile unsigned int pulses=0;
+volatile unsigned int count = 0;
 ///////////////////////////////
 
 void setup() {
@@ -41,7 +43,7 @@ void setup() {
 
 void loop() {
   //Serial.println(count); //Code for testing the counting
-  delay(30000);
+  delay(30000); //30 Second delay
   dataout = count + dataout; //Variable to send over I2C is updated every 30 seconds
   count = 0;
 }
@@ -56,12 +58,14 @@ void countpulses() {
 }
 
 void receiveCommand(int howMany){
+  detachInterrupt(0);
   LastMasterCommand = Wire.read(); // 1 byte (maximum 256 commands)
+  attachInterrupt(0, countpulses, RISING); // interrupt 0 = pin 2      
 }
 
 void slavesRespond(){
+  detachInterrupt(0);
   int returnValue = 0;
-  //int count;
  
   switch(LastMasterCommand){
     case 0:   // No new command was received
@@ -78,4 +82,6 @@ void slavesRespond(){
   Wire.write(buffer, 2);          // return slave's response to last command
   LastMasterCommand = 0;          // null last Master's command and wait for next
   dataout = 0;
+  attachInterrupt(0, countpulses, RISING); // interrupt 0 = pin 2      
+
 }
