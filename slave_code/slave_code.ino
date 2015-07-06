@@ -23,7 +23,7 @@ However, this now adds some unwanted deadtime in the detector which could be a p
 const byte SlaveDeviceId = 1;
 byte LastMasterCommand = 0;
 
-//int led = 13; //Used for debugging
+int led = 13; //Used for debugging
 int dataout;
 ///////////////////////////////
 
@@ -43,18 +43,18 @@ void setup() {
 
 void loop() {
   //Serial.println(count); //Code for testing the counting
-  delay(30000); //30 Second delay
+  delay(10000); //30 Second delay
   dataout = count + dataout; //Variable to send over I2C is updated every 30 seconds
   count = 0;
 }
 
 void countpulses() {  
   count++;
-  /*Used for debugging
+  //Used for debugging
   //Makes the 'L' LED flash when the ISR is serviced.
   digitalWrite(led,HIGH);
   delay(100);
-  digitalWrite(led,LOW);*/
+  digitalWrite(led,LOW);
 }
 
 void receiveCommand(int howMany){
