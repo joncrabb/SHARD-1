@@ -60,6 +60,18 @@
 <libraries>
 <library name="SHARD">
 <packages>
+<package name="S3590-08">
+<wire x1="-7.25" y1="6.35" x2="-7.25" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="-7.25" y1="-6.35" x2="7.25" y2="-6.35" width="0.127" layer="21"/>
+<wire x1="7.25" y1="-6.35" x2="7.25" y2="6.35" width="0.127" layer="21"/>
+<wire x1="7.25" y1="6.35" x2="-7.25" y2="6.35" width="0.127" layer="21"/>
+<pad name="2" x="6" y="-2.5" drill="0.5"/>
+<pad name="1" x="6" y="2.5" drill="0.5"/>
+<text x="4.3" y="-3.1" size="1.27" layer="21">2</text>
+<text x="4.2" y="2" size="1.27" layer="21">1</text>
+<text x="-6.5" y="7.1" size="1.27" layer="21">&gt;Name</text>
+<text x="-7.4" y="-8.5" size="1.27" layer="21">&gt;Value</text>
+</package>
 <package name="A111">
 <description>Package for A111 test board (PC21)</description>
 <pad name="DET" x="-27" y="17" drill="0.8"/>
@@ -85,7 +97,7 @@
 <text x="28" y="-9" size="1.27" layer="21">GNDOUT1</text>
 <text x="28" y="-17" size="1.27" layer="21">VS</text>
 <text x="-20" y="24" size="1.27" layer="25">&gt;Name</text>
-<text x="-20" y="-25" size="1.27" layer="27">value</text>
+<text x="-20" y="-25" size="1.27" layer="27">&gt;Value</text>
 <pad name="R2" x="0" y="26" drill="0.8"/>
 <pad name="R1" x="-9" y="26" drill="0.8"/>
 <text x="-5" y="24" size="1.27" layer="21">R</text>
@@ -94,20 +106,26 @@
 <wire x1="22.5" y1="-22.5" x2="22.5" y2="22.5" width="0.127" layer="21"/>
 <wire x1="22.5" y1="22.5" x2="-22.5" y2="22.5" width="0.127" layer="21"/>
 </package>
-<package name="S3590-08">
-<wire x1="-7.25" y1="6.35" x2="-7.25" y2="-6.35" width="0.127" layer="21"/>
-<wire x1="-7.25" y1="-6.35" x2="7.25" y2="-6.35" width="0.127" layer="21"/>
-<wire x1="7.25" y1="-6.35" x2="7.25" y2="6.35" width="0.127" layer="21"/>
-<wire x1="7.25" y1="6.35" x2="-7.25" y2="6.35" width="0.127" layer="21"/>
-<pad name="2" x="6" y="-2.5" drill="0.5"/>
-<pad name="1" x="6" y="2.5" drill="0.5"/>
-<text x="4.3" y="-3.1" size="1.27" layer="21">2</text>
-<text x="4.2" y="2" size="1.27" layer="21">1</text>
-<text x="-6.5" y="7.1" size="1.27" layer="21">&gt;Name</text>
-<text x="-7.4" y="-8.5" size="1.27" layer="21">&gt;Value</text>
-</package>
 </packages>
 <symbols>
+<symbol name="S3590-08">
+<wire x1="-12.7" y1="7.62" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="0" x2="-12.7" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-12.7" y1="-7.62" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="-12.7" y2="7.62" width="0.254" layer="94"/>
+<wire x1="0" y1="7.62" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="12.7" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="10.16" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="0" y2="12.7" width="0.254" layer="94"/>
+<wire x1="-10.16" y1="10.16" x2="-5.08" y2="15.24" width="0.254" layer="94"/>
+<pin name="IN1" x="-27.94" y="0" length="middle"/>
+<pin name="IN2" x="10.16" y="0" length="middle" rot="R180"/>
+<wire x1="-22.86" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
+</symbol>
 <symbol name="A111">
 <wire x1="-20.32" y1="20.32" x2="-20.32" y2="-20.32" width="0.254" layer="94"/>
 <wire x1="-20.32" y1="-20.32" x2="20.32" y2="-20.32" width="0.254" layer="94"/>
@@ -127,26 +145,24 @@
 <pin name="R2" x="-2.54" y="25.4" length="middle" rot="R270"/>
 <pin name="R1" x="-10.16" y="25.4" length="middle" rot="R270"/>
 </symbol>
-<symbol name="S3590-08">
-<wire x1="-12.7" y1="7.62" x2="-12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="0" x2="-12.7" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-12.7" y1="-7.62" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="-12.7" y2="7.62" width="0.254" layer="94"/>
-<wire x1="0" y1="7.62" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="12.7" x2="-10.16" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="10.16" x2="-7.62" y2="10.16" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="10.16" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-5.08" y1="7.62" x2="0" y2="12.7" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="10.16" x2="-5.08" y2="15.24" width="0.254" layer="94"/>
-<pin name="IN1" x="-27.94" y="0" length="middle"/>
-<pin name="IN2" x="10.16" y="0" length="middle" rot="R180"/>
-<wire x1="-22.86" y1="0" x2="-12.7" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="5.08" y2="0" width="0.254" layer="94"/>
-</symbol>
 </symbols>
 <devicesets>
+<deviceset name="S3590-08">
+<gates>
+<gate name="G$1" symbol="S3590-08" x="2.54" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="S3590-08">
+<connects>
+<connect gate="G$1" pin="IN1" pad="1"/>
+<connect gate="G$1" pin="IN2" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
 <deviceset name="A111">
 <gates>
 <gate name="G$1" symbol="A111" x="-5.08" y="0"/>
@@ -167,22 +183,6 @@
 <connect gate="G$1" pin="R2" pad="R2"/>
 <connect gate="G$1" pin="TESTIN" pad="TESTIN"/>
 <connect gate="G$1" pin="VS" pad="VS"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="S3590-08">
-<gates>
-<gate name="G$1" symbol="S3590-08" x="2.54" y="5.08"/>
-</gates>
-<devices>
-<device name="" package="S3590-08">
-<connects>
-<connect gate="G$1" pin="IN1" pad="1"/>
-<connect gate="G$1" pin="IN2" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -443,7 +443,6 @@ In this library the device names are the same as the pin names of the symbols, t
 </class>
 </classes>
 <parts>
-<part name="PC21" library="SHARD" deviceset="A111" device=""/>
 <part name="45V" library="keystone" deviceset="TP" device="-063"/>
 <part name="30V1" library="keystone" deviceset="TP" device="-063"/>
 <part name="30V0" library="keystone" deviceset="TP" device="-063"/>
@@ -455,13 +454,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="G1" library="battery" deviceset="AB9V" device=""/>
 <part name="SUPPLY3" library="supply2" deviceset="GND" device=""/>
 <part name="PINDIODE" library="SHARD" deviceset="S3590-08" device=""/>
+<part name="PC21" library="SHARD" deviceset="A111" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="PC21" gate="G$1" x="0" y="0"/>
 <instance part="45V" gate="G$1" x="7.62" y="38.1"/>
 <instance part="30V1" gate="G$1" x="7.62" y="45.72" rot="R180"/>
 <instance part="30V0" gate="G$1" x="15.24" y="45.72" rot="R180"/>
@@ -473,15 +472,16 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="G1" gate="G$1" x="43.18" y="-15.24" rot="R180"/>
 <instance part="SUPPLY3" gate="GND" x="60.96" y="-20.32"/>
 <instance part="PINDIODE" gate="G$1" x="-60.96" y="20.32" rot="R270"/>
+<instance part="PC21" gate="G$1" x="0" y="0"/>
 </instances>
 <busses>
 </busses>
 <nets>
 <net name="N$1" class="0">
 <segment>
-<pinref part="PC21" gate="G$1" pin="HV"/>
 <wire x1="7.62" y1="25.4" x2="7.62" y2="35.56" width="0.1524" layer="91"/>
 <pinref part="45V" gate="G$1" pin="1"/>
+<pinref part="PC21" gate="G$1" pin="HV"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -505,13 +505,16 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="25.4" y1="48.26" x2="33.02" y2="48.26" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="PC21" gate="G$1" pin="GND"/>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
 <wire x1="-25.4" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-7.62" x2="-33.02" y2="-10.16" width="0.1524" layer="91"/>
+<pinref part="PC21" gate="G$1" pin="GND"/>
+<pinref part="PINDIODE" gate="G$1" pin="IN2"/>
+<wire x1="-60.96" y1="10.16" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-60.96" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
+<junction x="-33.02" y="-7.62"/>
 </segment>
 <segment>
-<pinref part="PC21" gate="G$1" pin="GNDOUT1"/>
 <pinref part="SUPPLY3" gate="GND" pin="GND"/>
 <wire x1="25.4" y1="-5.08" x2="60.96" y2="-5.08" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="-5.08" x2="60.96" y2="-15.24" width="0.1524" layer="91"/>
@@ -519,35 +522,28 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="60.96" y1="-15.24" x2="60.96" y2="-17.78" width="0.1524" layer="91"/>
 <wire x1="55.88" y1="-15.24" x2="60.96" y2="-15.24" width="0.1524" layer="91"/>
 <junction x="60.96" y="-15.24"/>
-<pinref part="PC21" gate="G$1" pin="GNDOUT0"/>
 <wire x1="25.4" y1="10.16" x2="60.96" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="10.16" x2="60.96" y2="-5.08" width="0.1524" layer="91"/>
 <junction x="60.96" y="-5.08"/>
+<pinref part="PC21" gate="G$1" pin="GNDOUT1"/>
+<pinref part="PC21" gate="G$1" pin="GNDOUT0"/>
 </segment>
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="PC21" gate="G$1" pin="VS"/>
 <pinref part="G1" gate="G$1" pin="+"/>
 <wire x1="25.4" y1="-10.16" x2="25.4" y2="-15.24" width="0.1524" layer="91"/>
 <wire x1="25.4" y1="-15.24" x2="30.48" y2="-15.24" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$5" class="0">
-<segment>
-<pinref part="PINDIODE" gate="G$1" pin="IN2"/>
-<pinref part="PC21" gate="G$1" pin="IN"/>
-<wire x1="-60.96" y1="10.16" x2="-60.96" y2="7.62" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="7.62" x2="-25.4" y2="7.62" width="0.1524" layer="91"/>
+<pinref part="PC21" gate="G$1" pin="VS"/>
 </segment>
 </net>
 <net name="N$6" class="0">
 <segment>
 <pinref part="PINDIODE" gate="G$1" pin="IN1"/>
 <wire x1="-60.96" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
-<pinref part="PC21" gate="G$1" pin="DET"/>
 <wire x1="-30.48" y1="48.26" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="15.24" x2="-25.4" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="PC21" gate="G$1" pin="DET"/>
 </segment>
 </net>
 </nets>
