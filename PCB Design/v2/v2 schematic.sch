@@ -471,7 +471,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="SUPPLY2" gate="GND" x="-33.02" y="-12.7"/>
 <instance part="G1" gate="G$1" x="43.18" y="-15.24" rot="R180"/>
 <instance part="SUPPLY3" gate="GND" x="60.96" y="-20.32"/>
-<instance part="PINDIODE" gate="G$1" x="-60.96" y="20.32" rot="R270"/>
+<instance part="PINDIODE" gate="G$1" x="-53.34" y="33.02" rot="R90"/>
 <instance part="PC21" gate="G$1" x="0" y="0"/>
 </instances>
 <busses>
@@ -506,12 +506,12 @@ In this library the device names are the same as the pin names of the symbols, t
 </segment>
 <segment>
 <pinref part="SUPPLY2" gate="GND" pin="GND"/>
-<wire x1="-25.4" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="-7.62" x2="-33.02" y2="-10.16" width="0.1524" layer="91"/>
+<wire x1="-25.4" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="PC21" gate="G$1" pin="GND"/>
-<pinref part="PINDIODE" gate="G$1" pin="IN2"/>
-<wire x1="-60.96" y1="10.16" x2="-60.96" y2="-7.62" width="0.1524" layer="91"/>
-<wire x1="-60.96" y1="-7.62" x2="-33.02" y2="-7.62" width="0.1524" layer="91"/>
+<pinref part="PINDIODE" gate="G$1" pin="IN1"/>
+<wire x1="-33.02" y1="-7.62" x2="-53.34" y2="-7.62" width="0.1524" layer="91"/>
+<wire x1="-53.34" y1="-7.62" x2="-53.34" y2="5.08" width="0.1524" layer="91"/>
 <junction x="-33.02" y="-7.62"/>
 </segment>
 <segment>
@@ -539,11 +539,11 @@ In this library the device names are the same as the pin names of the symbols, t
 </net>
 <net name="N$6" class="0">
 <segment>
-<pinref part="PINDIODE" gate="G$1" pin="IN1"/>
-<wire x1="-60.96" y1="48.26" x2="-30.48" y2="48.26" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="48.26" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="43.18" x2="-30.48" y2="15.24" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="15.24" x2="-25.4" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="PC21" gate="G$1" pin="DET"/>
+<pinref part="PINDIODE" gate="G$1" pin="IN2"/>
+<wire x1="-53.34" y1="43.18" x2="-30.48" y2="43.18" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -61,6 +61,7 @@
 <packages>
 <package name="A111">
 <description>Package for A111 test board (PC21)</description>
+<rectangle x1="-22.25" y1="-22.25" x2="22.25" y2="22.25" layer="1" rot="R180"/>
 <pad name="DET" x="-27" y="17" drill="0.8"/>
 <pad name="IN" x="-27" y="5" drill="0.8"/>
 <pad name="TESTIN" x="-27" y="-6" drill="0.8"/>
@@ -88,10 +89,6 @@
 <pad name="R2" x="0" y="26" drill="0.8"/>
 <pad name="R1" x="-9" y="26" drill="0.8"/>
 <text x="-5" y="24" size="1.27" layer="21">R</text>
-<wire x1="-22.5" y1="22.5" x2="-22.5" y2="-22.5" width="0.127" layer="21"/>
-<wire x1="-22.5" y1="-22.5" x2="22.5" y2="-22.5" width="0.127" layer="21"/>
-<wire x1="22.5" y1="-22.5" x2="22.5" y2="22.5" width="0.127" layer="21"/>
-<wire x1="22.5" y1="22.5" x2="-22.5" y2="22.5" width="0.127" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -162,7 +159,7 @@
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="86.36" y="45.72"/>
+<instance part="U$1" gate="G$1" x="88.9" y="40.64"/>
 </instances>
 <busses>
 </busses>
