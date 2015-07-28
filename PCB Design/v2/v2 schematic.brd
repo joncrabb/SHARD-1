@@ -353,12 +353,12 @@ design rules under a new name.</description>
 </pass>
 </autorouter>
 <elements>
-<element name="45V" library="keystone" package="TP-063" value="TP-063" x="85" y="60" rot="R270"/>
-<element name="30V1" library="keystone" package="TP-063" value="TP-063" x="50" y="60"/>
-<element name="30V0" library="keystone" package="TP-063" value="TP-063" x="50" y="75"/>
-<element name="15V0" library="keystone" package="TP-063" value="TP-063" x="15" y="60"/>
-<element name="15V1" library="keystone" package="TP-063" value="TP-063" x="15" y="75"/>
-<element name="TOGND" library="keystone" package="TP-063" value="TP-063" x="15" y="25"/>
+<element name="45V" library="keystone" package="TP-063" value="TP-063" x="80" y="60" rot="R270"/>
+<element name="30V1" library="keystone" package="TP-063" value="TP-063" x="45" y="60"/>
+<element name="30V0" library="keystone" package="TP-063" value="TP-063" x="45" y="75"/>
+<element name="15V0" library="keystone" package="TP-063" value="TP-063" x="10" y="59"/>
+<element name="15V1" library="keystone" package="TP-063" value="TP-063" x="10" y="74"/>
+<element name="TOGND" library="keystone" package="TP-063" value="TP-063" x="10" y="25"/>
 <element name="G1" library="battery" package="AB9V" value="AB9V" x="29" y="7" rot="R270"/>
 <element name="PINDIODE" library="SHARD" package="S3590-08" value="S3590-08" x="30" y="37" rot="R90"/>
 <element name="PC21" library="SHARD" package="A111" value="A111" x="67" y="26"/>
@@ -367,19 +367,19 @@ design rules under a new name.</description>
 <signal name="N$1">
 <contactref element="45V" pad="1"/>
 <contactref element="PC21" pad="HV"/>
-<wire x1="75" y1="52" x2="83" y2="52" width="0.4064" layer="1"/>
-<wire x1="83" y1="52" x2="85" y2="54" width="0.4064" layer="1"/>
-<wire x1="85" y1="54" x2="85" y2="60" width="0.4064" layer="1"/>
+<wire x1="75" y1="52" x2="77" y2="52" width="0.4064" layer="1"/>
+<wire x1="77" y1="52" x2="80" y2="55" width="0.4064" layer="1"/>
+<wire x1="80" y1="55" x2="80" y2="60" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="30V1" pad="1"/>
 <contactref element="30V0" pad="1"/>
-<wire x1="50" y1="60" x2="50" y2="75" width="0.4064" layer="1"/>
+<wire x1="45" y1="60" x2="45" y2="75" width="0.4064" layer="1"/>
 </signal>
 <signal name="N$3">
 <contactref element="15V1" pad="1"/>
 <contactref element="15V0" pad="1"/>
-<wire x1="15" y1="75" x2="15" y2="60" width="0.4064" layer="1"/>
+<wire x1="10" y1="74" x2="10" y2="59" width="0.4064" layer="1"/>
 </signal>
 <signal name="GND">
 <contactref element="TOGND" pad="1"/>
